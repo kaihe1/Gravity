@@ -13,12 +13,13 @@
     this.updata = function() {
       this.velocity += this.gravity;
       this.x -= this.velocity;
-      
       if (this.x < 0) {
         this.x = w;
         this.velocity = 0;
         this.y = Math.floor(Math.random()*h);
         yr = random(150,200);
+        score ++;
+        document.getElementById('score').innerHTML = "Score:" + score;
       }
     }
   

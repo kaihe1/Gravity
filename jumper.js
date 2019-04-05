@@ -8,7 +8,7 @@
     
     this.show = function() {
       fill(color('red'));
-      ellipse(this.x,this.y,50,50);
+      rect (this.x,this.y,50,50);
     }
     
     this.up = function() {
@@ -27,8 +27,8 @@
       this.velocity += this.gravity;//Gravity applied when not jumping
       this.y += this.velocity;
       
-      if (this.y > h) {
-        this.y = h;
+      if (this.y > h-50) {
+        this.y = h-50;
         this.velocity = 0;
       }
       if (this.y < 0) { //jumper hits the celling
