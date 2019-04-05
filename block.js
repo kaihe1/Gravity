@@ -8,7 +8,6 @@
     this.show = function() {
       fill(color('white'));
       rect(this.x,this.y,50,yr);
-      image(backg,block.x,block.y);
     }
     
     this.updata = function() {
