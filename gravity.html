@@ -11,6 +11,7 @@
           margin:0;
           padding:0;
           overflow:hidden;
+          background-image:url("backg.jpg");
         }
         #score{
           color:red;
@@ -38,10 +39,12 @@
   function setup() {
     createCanvas(w,h);
     backg = loadImage("backg.jpg");
-    image =(backg,0,0)
+  
   }
   
   function draw() {
+    background("rgba(255,0,0,0");
+    clear();
     background(0);
    jumper.show();
     jumper.updata();
