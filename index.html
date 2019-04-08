@@ -36,15 +36,16 @@
   var block = new block();
   var collide = new collide();
   var score = 0;
+  var backg;
+  var cp;
   function setup() {
-    createCanvas(w,h);
     backg = loadImage("backg.jpg");
-  
+    cp = loadImage("cp.jpg");
+    createCanvas(1300,975);
   }
   
   function draw() {
-    background("rgba(255,0,0,0");
-    background(0);
+    background(backg);
    jumper.show();
     jumper.updata();
     jumper.move();

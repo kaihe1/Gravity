@@ -1,14 +1,15 @@
-
+var cp;
+    
   function jumper() {
     this.x = 50;
     this.y = 0;
     this.gravity = 0.5; //forces of the gravity
     this.lift = -10; //opposing the force of gravity
     this.velocity = 0;
-    
     this.show = function() {
       fill(color('red'));
       rect (this.x,this.y,50,50);
+      image(cp,this.x,this.y);
     }
     
     this.up = function() {
