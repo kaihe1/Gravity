@@ -19,7 +19,7 @@
           position:fixed;
         }
         #end{
-          color:white;
+          color:red;
           font-size:190px;
           position:fixed;
         }
@@ -51,7 +51,7 @@
     jumper.move();
     block.show();
     block.updata();
-    hit = collideRectCircle(block.x,block.y,50,50,jumper.x,jumper.y,50);
+    hit = collideRectCircle(block.x,block.y,70,70,jumper.x,jumper.y,50);
     if (hit == true){
       noLoop();
       document.getElementById('end').innerHTML = "Game over";
