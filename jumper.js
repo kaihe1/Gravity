@@ -8,7 +8,7 @@ var cp;
     this.velocity = 0;
     this.show = function() {
       rect (this.x,this.y,50,50);
-      image(cp,this.x,this.y,50,50);
+      image(cp,this.x,this.y,70,70);
     }
     
     this.up = function() {
