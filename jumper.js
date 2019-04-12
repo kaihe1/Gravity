@@ -7,7 +7,7 @@ var cp;
     this.lift = -10; //opposing the force of gravity
     this.velocity = 0;
     this.show = function() {
-      image(cp,this.x,this.y,204,188);
+      image(cp,this.x,this.y,51,47);
     }
     
     this.up = function() {
