@@ -35,6 +35,7 @@
   var jumper = new jumper();
   var block = new block();
   var collide = new collide();
+  var block2 = new block2();
   var score = 0;
   var backg;
   var cp;
@@ -53,6 +54,9 @@
     jumper.move();
     block.show();
     block.updata();
+    block2.show();
+    block2.updata();
+    
     hit = collideRectCircle(block.x,block.y,51,47,jumper.x,jumper.y,50);
     if (hit == true){
       noLoop();
@@ -63,6 +67,11 @@
     if (hit2 == true){
       jumper.velocity = 0;
       jumper.y -= 30;
+    }
+    hit3 = collideRectCircle(block2.x,block2.y,170,85,jumper.x,jumper.y,50);
+    if (hit3 == true){
+      noLoop();
+      document.getElementById('end').innerHTML = "Game over";
     }
 }
   </script>
