@@ -38,9 +38,11 @@
   var score = 0;
   var backg;
   var cp;
+  var blockp;
   function setup() {
     backg = loadImage("backg.jpg");
     cp = loadImage("cp.png");
+    blockp = loadImage("block.png");
     createCanvas(w,h);
   }
   
@@ -51,13 +53,13 @@
     jumper.move();
     block.show();
     block.updata();
-    hit = collideRectCircle(block.x,block.y,204,168,jumper.x,jumper.y,50);
+    hit = collideRectCircle(block.x,block.y,51,47,jumper.x,jumper.y,50);
     if (hit == true){
       noLoop();
       document.getElementById('end').innerHTML = "Game over";
     }
     collide.show();
-    hit2 = collideRectCircle(collide.x,collide.y,100,100,jumper.x,jumper.y,50);
+    hit2 = collideRectCircle(collide.x,collide.y,170,85,jumper.x,jumper.y,50);
     if (hit2 == true){
       jumper.velocity = 0;
       jumper.y -= 30;
