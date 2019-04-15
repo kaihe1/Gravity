@@ -27,6 +27,8 @@
   </head>
   <body>
     <p id="score"></p>
+    <p id="re1"><button onclick="restart()">Restart</button></p>
+    
     <center><p id="end"></p></center>
   <script>
 
@@ -43,6 +45,10 @@
   var cp;
   var blockp;
   var cop;
+  function restart(){
+    location.reload();
+    var button = document.getElementById('re1').style.visibility = "hidden";
+  }
   
   function setup() {
     backg = loadImage("backg.jpg");
@@ -67,6 +73,7 @@
     if (hit == true){
       noLoop();
       document.getElementById('end').innerHTML = "Game over";
+      var button = document.getElementById('re1').style.visibility = "visible";
     }
     
     collide.show();
@@ -81,6 +88,7 @@
     if (hit3 == true){
       noLoop();
       document.getElementById('end').innerHTML = "Game over";
+      var button = document.getElementById('re1').style.visibility = "visible";
     }
 }
   </script>
