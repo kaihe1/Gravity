@@ -4,6 +4,6 @@ function collide(){
   this.y = h/2;
   
   this.show = function(){
-   image(cop,this.x,this.y,260,260);
+   image(cop,this.x,this.y,130,171);
   }
 }
