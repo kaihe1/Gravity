@@ -15,10 +15,10 @@ var cp;
     }
     
     this.move = function() {
-      if (keyIsDown(37)) {
+      if (keyIsDown(37)&&(this.x > 50)) {
       this.x -= 10;
     }
-    if (keyIsDown(39)) {
+    if (keyIsDown(39)&&(this.x <50 )) {
       this.x += 10;
     }
     }
