@@ -1,5 +1,5 @@
 var cp;
-    
+var song;
   function jumper() {
     this.x = 50;
     this.y = 0;
@@ -8,6 +8,7 @@ var cp;
     this.velocity = 0;
     this.show = function() {
       image(cp,this.x,this.y,51,47);
+      song = loadSound("pop.mp3");
     }
     
     this.up = function() {
@@ -17,9 +18,11 @@ var cp;
     this.move = function() {
       if (keyIsDown(37)&&(this.x > 50)) {
       this.x -= 10;
+      song.play();
     }
     if (keyIsDown(39)&&(this.x <50 )) {
       this.x += 10;
+      song.play();
     }
     }
     this.updata = function() {
