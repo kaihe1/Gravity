@@ -47,7 +47,6 @@
   var cop;
   function restart(){
     location.reload();
-    var button = document.getElementById('re1').style.visibility = "hidden";
   }
   
   function setup() {
@@ -68,6 +67,8 @@
     block.updata();
     block2.show();
     block2.updata();
+    
+    var button = document.getElementById('re1').style.visibility = "hidden";
     
     hit = collideRectCircle(block.x,block.y,51,47,jumper.x,jumper.y,50);
     if (hit == true){
