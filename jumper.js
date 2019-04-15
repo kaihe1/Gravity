@@ -8,7 +8,6 @@ var song;
     this.velocity = 0;
     this.show = function() {
       image(cp,this.x,this.y,51,47);
-      song = loadSound("pop.mp3");
     }
     
     this.up = function() {
