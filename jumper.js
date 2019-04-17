@@ -17,11 +17,11 @@ var song;
     this.move = function() {
       if (keyIsDown(37)&&(this.x > 50)) {
       this.x -= 10;
-      song.play();
+      //song.play();
     }
     if (keyIsDown(39)&&(this.x <50 )) {
       this.x += 10;
-      song.play();
+      //song.play();
     }
     }
     this.updata = function() {
