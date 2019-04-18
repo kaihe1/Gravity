@@ -1,5 +1,5 @@
-var cp;
-var song;
+
+
   function jumper() {
     this.x = 50;
     this.y = 0;
@@ -12,24 +12,23 @@ var song;
     
     this.up = function() {
       this.velocity += this.lift;//jumping function
+      song.play();
     }
     
     this.move = function() {
-      if (keyIsDown(37)&&(this.x > 50)) {
+      if (keyIsDown(37)&&(this.x > 0)) {
       this.x -= 10;
-      //song.play();
     }
-    if (keyIsDown(39)&&(this.x <50 )) {
+    if (keyIsDown(39)&&(this.x < w-50 )) {
       this.x += 10;
-      //song.play();
     }
     }
     this.updata = function() {
       this.velocity += this.gravity;//Gravity applied when not jumping
       this.y += this.velocity;
       
-      if (this.y > h-50) {
-        this.y = h-50;
+      if (this.y > h-180) {
+        this.y = h-180;
         this.velocity = 0;
       }
       if (this.y < 0) { //jumper hits the celling
